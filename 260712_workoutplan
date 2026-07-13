@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+
+  <title>My Workout Plans</title>
+
+</head>
+<body>
+
+  <h1>My Workout Plans</h1>
+
+  <div class="tabs">
+    <button class="tab-button active" onclick="showTab('upper')">Upper</button>
+    <button class="tab-button" onclick="showTab('lower')">Lower</button>
+    <button class="tab-button" onclick="showTab('total')">Total</button>
+  </div>
+
+  <div id="upper" class="workout active">
+    <h2>Upper Body</h2>
+    <table>
+      <tr><th>Exercise</th><th>Sets x Reps</th></tr>
+      <tr><td>Bench Press</td><td>3 x 8</td></tr>
+      <tr><td>Rows</td><td>3 x 10</td></tr>
+    </table>
+  </div>
+
+  <div id="lower" class="workout">
+    <h2>Lower Body</h2>
+    <table>
+      <tr><th>Exercise</th><th>Sets x Reps</th></tr>
+      <tr><td>Squats</td><td>3 x 8</td></tr>
+      <tr><td>Lunges</td><td>3 x 10</td></tr>
+    </table>
+  </div>
+
+  <div id="total" class="workout">
+    <h2>Total Body</h2>
+    <table>
+      <tr><th>Exercise</th><th>Sets x Reps</th></tr>
+      <tr><td>Deadlift</td><td>3 x 6</td></tr>
+      <tr><td>Push-ups</td><td>3 x 12</td></tr>
+    </table>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.workout').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
