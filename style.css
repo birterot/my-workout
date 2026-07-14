@@ -4,8 +4,8 @@ body {
   margin: 40px auto;
   padding: 0 20px;
   line-height: 1.6;
-  background-color: #f4f1ea; /* warm off-white, like unbleached linen */
-  color: #3c3630; /* soft charcoal-brown ink */
+  background-color: #f4f1ea;
+  color: #3c3630;
 }
 
 h1 {
@@ -21,8 +21,8 @@ h1 {
 h2 {
   font-weight: 400;
   font-size: 20px;
-  color: #6b6355; /* muted taupe */
-  margin-bottom: 12px;
+  color: #6b6355;
+  margin-bottom: 20px;
 }
 
 .tabs {
@@ -36,7 +36,7 @@ h2 {
   padding: 10px;
   border: 1px solid #d8d2c4;
   border-radius: 6px;
-  background: #ece7db; /* pale sand */
+  background: #ece7db;
   color: #6b6355;
   font-size: 15px;
   cursor: pointer;
@@ -44,7 +44,7 @@ h2 {
 }
 
 .tab-button.active {
-  background: #8a7c66; /* warm clay/wood */
+  background: #8a7c66;
   color: #f4f1ea;
   border-color: #8a7c66;
 }
@@ -57,6 +57,40 @@ h2 {
   display: block;
 }
 
+/* Section blocks group exercises by phase (warmup, primer, superset, etc.) */
+.section {
+  margin-bottom: 32px;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #d8d2c4;
+}
+
+.section-header h3 {
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #4a453d;
+  margin: 0;
+}
+
+/* Badge = the round count / format tag (2 Rounds, 3EMOM, 12 Min AMRAP, etc.) */
+.badge {
+  font-size: 12px;
+  color: #f4f1ea;
+  background-color: #a39a86; /* soft sage-taupe, distinct from the clay tab color */
+  padding: 3px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -64,41 +98,52 @@ table {
 
 th {
   text-align: left;
-  padding: 10px 8px;
+  padding: 8px 8px;
   font-weight: 400;
-  color: #a39a86; /* soft sage-taupe */
-  font-size: 13px;
+  color: #a39a86;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border-bottom: 1px solid #d8d2c4;
+  border-bottom: 1px solid #e5e0d3;
 }
 
 td {
   text-align: left;
-  padding: 12px 8px;
-  border-bottom: 1px solid #e5e0d3;
+  padding: 10px 8px;
+  border-bottom: 1px solid #ece7db;
 }
 
 tr:last-child td {
   border-bottom: none;
 }
 
+.notes {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid #d8d2c4;
+  font-size: 14px;
+  color: #6b6355;
+}
+
+.notes p {
+  margin: 8px 0;
+}
+
 /* Japandi-style links: understated, earthy, no harsh blue/underline by default */
 a {
-  color: #8a7c66; /* same warm clay tone as the active tab, ties the palette together */
+  color: #8a7c66;
   text-decoration: none;
-  border-bottom: 1px solid #c9bca4; /* soft dotted-feeling underline instead of a hard line */
+  border-bottom: 1px solid #c9bca4;
   padding-bottom: 1px;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 a:hover,
 a:active {
-  color: #5c5040; /* deepens on tap/hover, like ink soaking into paper */
+  color: #5c5040;
   border-color: #5c5040;
 }
 
-/* small helper if you want a quieter secondary-text look for notes */
 em {
   color: #a39a86;
   font-style: normal;
