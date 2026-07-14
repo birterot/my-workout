@@ -1,86 +1,105 @@
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.6;
-    background-color: #f4f1ea; /* warm off-white, like unbleached linen */
-    color: #3c3630; /* soft charcoal-brown ink */
-  }
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+  background-color: #f4f1ea; /* warm off-white, like unbleached linen */
+  color: #3c3630; /* soft charcoal-brown ink */
+}
 
-  h1 {
-    font-weight: 400;
-    font-size: 28px;
-    letter-spacing: 1px;
-    color: #4a453d;
-    border-bottom: 1px solid #d8d2c4;
-    padding-bottom: 12px;
-    margin-bottom: 24px;
-  }
+h1 {
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #4a453d;
+  border-bottom: 1px solid #d8d2c4;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
 
-  h2 {
-    font-weight: 400;
-    font-size: 20px;
-    color: #6b6355; /* muted taupe */
-    margin-bottom: 12px;
-  }
+h2 {
+  font-weight: 400;
+  font-size: 20px;
+  color: #6b6355; /* muted taupe */
+  margin-bottom: 12px;
+}
 
-  .tabs {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 28px;
-  }
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 28px;
+}
 
-  .tab-button {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #d8d2c4;
-    border-radius: 6px;
-    background: #ece7db; /* pale sand */
-    color: #6b6355;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #d8d2c4;
+  border-radius: 6px;
+  background: #ece7db; /* pale sand */
+  color: #6b6355;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
 
-  .tab-button.active {
-    background: #8a7c66; /* warm clay/wood */
-    color: #f4f1ea;
-    border-color: #8a7c66;
-  }
+.tab-button.active {
+  background: #8a7c66; /* warm clay/wood */
+  color: #f4f1ea;
+  border-color: #8a7c66;
+}
 
-  .workout {
-    display: none;
-  }
+.workout {
+  display: none;
+}
 
-  .workout.active {
-    display: block;
-  }
+.workout.active {
+  display: block;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-  th {
-    text-align: left;
-    padding: 10px 8px;
-    font-weight: 400;
-    color: #a39a86; /* soft sage-taupe */
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: 1px solid #d8d2c4;
-  }
+th {
+  text-align: left;
+  padding: 10px 8px;
+  font-weight: 400;
+  color: #a39a86; /* soft sage-taupe */
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #d8d2c4;
+}
 
-  td {
-    text-align: left;
-    padding: 12px 8px;
-    border-bottom: 1px solid #e5e0d3;
-  }
+td {
+  text-align: left;
+  padding: 12px 8px;
+  border-bottom: 1px solid #e5e0d3;
+}
 
-  tr:last-child td {
-    border-bottom: none;
-  }
+tr:last-child td {
+  border-bottom: none;
+}
 
+/* Japandi-style links: understated, earthy, no harsh blue/underline by default */
+a {
+  color: #8a7c66; /* same warm clay tone as the active tab, ties the palette together */
+  text-decoration: none;
+  border-bottom: 1px solid #c9bca4; /* soft dotted-feeling underline instead of a hard line */
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
 
+a:hover,
+a:active {
+  color: #5c5040; /* deepens on tap/hover, like ink soaking into paper */
+  border-color: #5c5040;
+}
+
+/* small helper if you want a quieter secondary-text look for notes */
+em {
+  color: #a39a86;
+  font-style: normal;
+}
