@@ -94,6 +94,19 @@ h2 {
 table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Keep Load / Reps-Time columns compact so Exercise name has room to breathe */
+th:nth-child(2), td:nth-child(2),
+th:nth-child(3), td:nth-child(3) {
+  width: 78px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+th:first-child, td:first-child {
+  width: auto;
 }
 
 th {
