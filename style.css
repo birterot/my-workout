@@ -69,6 +69,8 @@ h2 {
   margin-bottom: 8px;
   padding-bottom: 6px;
   border-bottom: 1px solid #d8d2c4;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .section-header h3 {
@@ -78,6 +80,13 @@ h2 {
   letter-spacing: 0.6px;
   color: #4a453d;
   margin: 0;
+}
+
+
+.badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 /* Badge = the round count / format tag (2 Rounds, 3EMOM, 12 Min AMRAP, etc.) */
