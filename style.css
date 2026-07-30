@@ -94,40 +94,76 @@ h2 {
 table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
+  table-layout: fixed; /* keeps columns consistent across rows */
 }
 
-/* Keep Load / Reps-Time columns compact so Exercise name has room to breathe */
-th:nth-child(2), td:nth-child(2),
+/* Exercise name gets the most room; Load / Reps-Time stay compact but WRAP instead of overflowing */
+th:nth-child(1), td:nth-child(1) {
+  width: 34%;
+}
+
+th:nth-child(2), td:nth-child(2) {
+  width: 20%;
+}
+
 th:nth-child(3), td:nth-child(3) {
-  width: 78px;
-  white-space: nowrap;
-  font-size: 13px;
+  width: 18%;
 }
 
-th:first-child, td:first-child {
-  width: auto;
+th:nth-child(4), td:nth-child(4) {
+  width: 28%;
 }
 
 th {
   text-align: left;
-  padding: 8px 8px;
+  padding: 8px 6px;
   font-weight: 400;
   color: #a39a86;
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   border-bottom: 1px solid #e5e0d3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 td {
   text-align: left;
-  padding: 10px 8px;
+  padding: 10px 6px;
   border-bottom: 1px solid #ece7db;
+  font-size: 13.5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 tr:last-child td {
   border-bottom: none;
+}
+
+/* Tables with only 3 columns (no Comment) — let Reps/Time take the extra space instead of staying cramped */
+table:has(th:nth-child(3):last-child) th:nth-child(3),
+table:has(th:nth-child(3):last-child) td:nth-child(3) {
+  width: 46%;
+}
+
+/* On narrow phones, tighten things up further so nothing feels cramped */
+@media (max-width: 420px) {
+  body {
+    padding: 0 12px;
+  }
+  th {
+    font-size: 10px;
+    padding: 6px 4px;
+  }
+  td {
+    font-size: 12.5px;
+    padding: 8px 4px;
+  }
+  th:nth-child(1), td:nth-child(1) { width: 32%; }
+  th:nth-child(2), td:nth-child(2) { width: 21%; }
+  th:nth-child(3), td:nth-child(3) { width: 19%; }
+  th:nth-child(4), td:nth-child(4) { width: 28%; }
 }
 
 .notes {
